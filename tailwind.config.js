@@ -1,8 +1,5 @@
 
-<<<<<<< HEAD
 // tailwind.config.js
-=======
->>>>>>> 527b7bdeaa1c7a9b6b47d60bdd9bc15bda6825ba
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -28,8 +25,4 @@ module.exports = {
       "dark",
     ],
   },
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> 527b7bdeaa1c7a9b6b47d60bdd9bc15bda6825ba
