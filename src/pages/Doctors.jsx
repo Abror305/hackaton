@@ -61,7 +61,7 @@ export default function Doctor() {
     const fetchDoctors = async () => {
         setLoading(true);
         try {
-            let url = `https://f19bcc969cdb.ngrok-free.app/api/user/doctors?`;
+            let url = `https://ca755a3441cc.ngrok-free.app/api/user/doctors?`;
             if (searchQuery) url += `search=${encodeURIComponent(searchQuery)}&`;
             if (selectedSpecialty !== "all") url += `role=${encodeURIComponent(selectedSpecialty)}`;
             const res = await fetch(url, {
@@ -112,7 +112,7 @@ export default function Doctor() {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
-            <Navbar />
+
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                 {/* Hero */}
@@ -161,7 +161,7 @@ export default function Doctor() {
                 </div>
 
                 {/* Doctor Cards */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 ">
                     {loading ? (
                         <div className="col-span-full flex justify-center items-center py-12">
                             <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
@@ -174,11 +174,18 @@ export default function Doctor() {
                                     <div className="flex-1">
                                         <h3 className="font-bold text-lg text-gray-800">Dr. {doctor.fullName}</h3>
                                         <p className="text-blue-600 font-medium">{doctor.specialty}</p>
-                                        <div className="flex items-center text-sm text-gray-600 gap-2 mt-1">
-                                            <Star className="h-4 w-4 text-yellow-400" /> {doctor.rating}
-                                            <Clock className="h-4 w-4" /> {doctor.experience} yil
-                                            <MapPin className="h-4 w-4" /> {doctor.location}
+                                        <div className="flex flex-col mt-1 text-sm text-gray-600 gap-1">
+                                            <div className="flex items-center gap-2">
+                                                <Star className="h-4 w-4 text-yellow-400" /> {doctor.rating}
+                                                <Clock className="h-4 w-4" /> {doctor.experience} yil
+                                                <MapPin className="h-4 w-4" /> {doctor.location}
+                                            </div>
+                                            <div className="flex items-center gap-1 text-gray-700 font-medium">
+                                                <Phone className="h-4 w-4" /> +998 95 210 05 50
+                                            </div>
                                         </div>
+
+
                                     </div>
                                 </div>
                                 <div className="mt-4 flex justify-between items-center">
