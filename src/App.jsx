@@ -1,22 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 
-import Doctror from "./pages/Doctor";
-import DoctorDashboard from './pages/DoctorDashboard';
+// Sahifalar
+import DoctorPage from "./pages/Doctor";
 
+import StaticDoctor from "./pages/Staticdoctor";
+import DoctorDashboard from "./pages/DoctorDashboard";
 
-function App() {
-  const [count, setCount] = useState(0)
+// Komponent
+import Sidebar from "./components/Header";
 
+const App = () => {
   return (
-    <>
-    <Doctror /> 
-    <DoctorDashboard />
-    </>
-  )
-}
+<div>
+      <Sidebar />
+      <div className="flex min-h-screen">
 
-export default App
+
+      {/* Content */}
+      <main className="flex-1 p-6 bg-gray-50">
+        <Routes>
+          <Route path="/" element={<DoctorDashboard />} />
+          <Route path="/doctor" element={<DoctorPage />} />
+          <Route path="/staticdoctor" element={<StaticDoctor />} />
+        </Routes>
+      </main>
+    </div>
+</div>
+  );
+};
+
+export default App;
