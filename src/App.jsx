@@ -5,6 +5,7 @@ import './App.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Doctror from "./pages/Doctor";
+import DoctorDashboard from './pages/DoctorDashboard';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
   return (
     <>
     <Doctror /> 
+    <DoctorDashboard />
     </>
   )
 }
