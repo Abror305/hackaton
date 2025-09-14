@@ -3,7 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Login from "./pages/Login";
+
+import Doctror from "./pages/Doctor";
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
 
   return (
     <>
-    
+    <Doctror /> 
     </>
   )
 }
