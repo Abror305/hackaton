@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Doctror from "./pages/Doctor";
+import Doctors from "./pages/Doctors";
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-    <Doctror /> 
+    <Doctors /> 
     </>
   )
 }
